@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio | ECE Student</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080d18;
+    color: #f5f7ff;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8,13,24,0.95);
+    border-bottom: 1px solid #202b40;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #48a9ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #48a9ff;
+}
+
+section {
+    padding: 100px 10%;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at 80% 40%, #142e50, #080d18 55%);
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #48a9ff;
+}
+
+.hero p {
+    color: #aab7ca;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.tag {
+    color: #48a9ff;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #1689e8;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    margin: 8px 8px 8px 0;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0064ba;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #48a9ff;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+h2 span {
+    color: #48a9ff;
+}
+
+.about, .projects {
+    background: #0c1423;
+}
+
+.about p, .education p {
+    color: #aab7ca;
+    max-width: 800px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111d30;
+    padding: 25px;
+    border: 1px solid #243650;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #48a9ff;
+}
+
+.card h3 {
+    color: #48a9ff;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #aab7ca;
+}
+
+.skill {
+    display: inline-block;
+    background: #182c46;
+    border: 1px solid #29496c;
+    color: #c6e4ff;
+    padding: 9px 16px;
+    border-radius: 25px;
+    margin: 6px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #aab7ca;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #050a12;
+    color: #8997ab;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.profile-frame {
+    width: 350px;
+    height: 430px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 2px solid #48a9ff;
+    box-shadow: 0 0 35px rgba(72,169,255,0.2);
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+@media(max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-frame {
+        width: 260px;
+        height: 320px;
+    }
+}
+
+.contact-grid {
+    max-width: 950px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.contact-grid .card {
+    padding: 30px 20px;
+}
+
+.contact-grid .btn {
+    margin-top: 15px;
+}
+
+.contact p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #aab7ca;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Mithun R Naik</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <div class="tag">WELCOME TO MY PORTFOLIO</div>
+
+        <h1>
+            Hi, I'm<br>
+            <span>Mithun R Naik.</span>
+        </h1>
+
+        <h3>Electronics & Communication Engineering Student</h3>
+
+        <p>
+            Exploring Electronics, Software Development
+            and Emerging Technologies. Passionate about
+            learning, building and innovation.
+        </p>
+
+        <a href="#projects" class="btn">Explore My Work</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+
+    <div class="profile-frame">
+        <img src="images/mithun.jpeg"
+             alt="Mithun R Naik">
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+    <h2>About <span>Me</span></h2>
+
+    <p>
+        I am a second-year Electronics and Communication
+        Engineering student with a strong interest in
+        electronics, software development and emerging
+        technologies.
+
+        I enjoy exploring new technologies, improving
+        my technical skills and developing creative
+        solutions to real-world problems.
+
+        My goal is to become a skilled engineer and
+        contribute to innovative technology.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>My <span>Skills</span></h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Programming</h3>
+            <p>Python, C, HTML, CSS and JavaScript.</p>
+        </div>
+
+        <div class="card">
+            <h3>Electronics</h3>
+            <p>Basic Electronics, Digital Logic and Circuit Analysis.</p>
+        </div>
+
+        <div class="card">
+            <h3>Tools</h3>
+            <p>VS Code, GitHub and development tools.</p>
+        </div>
+
+        <div class="card">
+            <h3>Interests</h3>
+            <p>Web Development, IoT, AI and Semiconductor Technology.</p>
+        </div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <h2>My <span>Projects</span></h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>
+                A personal website showcasing my education,
+                skills, interests and projects.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Python Projects</h3>
+            <p>
+                Beginner programming projects developed
+                using Python.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Electronics Projects</h3>
+            <p>
+                Exploring electronic circuits and
+                practical engineering applications.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="education" id="education">
+    <h2>My <span>Education</span></h2>
+
+    <div class="card">
+        <h3>Bachelor of Engineering</h3>
+        <p>Electronics and Communication Engineering</p>
+        <p>Acharya Institute of Technology</p>
+        <p>Currently pursuing 2nd year</p>
+    </div>
+</section>
+
+
+<section class="contact" id="contact">
+
+    <h2>Get In <span>Touch</span></h2>
+
+    <p>
+        I'm always open to connecting with people,
+        exploring new opportunities and collaborating
+        on interesting technology projects.
+    </p>
+
+    <div class="grid contact-grid">
+
+        <div class="card">
+            <h3>Email</h3>
+            <p>Let's connect through email.</p>
+            <a href="mailto:mithunaik24@gmail.com"
+               class="btn">
+                Send Email
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>LinkedIn</h3>
+            <p>Connect with me professionally.</p>
+            <a href="https://www.linkedin.com/in/mithun-r-naik-340607386?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+               target="_blank"
+               class="btn">
+                Visit LinkedIn
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>GitHub</h3>
+            <p>Explore my coding projects.</p>
+            <a href="https://github.com/mithunaik24-maker"
+               target="_blank"
+               class="btn">
+                Visit GitHub
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 My Portfolio. All Rights Reserved.</p>
+</footer>
+
+<script>
+const links = document.querySelectorAll('nav a');
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        console.log("Navigating to " + link.textContent);
+    });
+});
+</script>
+
+</body>
+</html>
